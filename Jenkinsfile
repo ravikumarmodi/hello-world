@@ -29,7 +29,7 @@ pipeline{
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u akshyaganesh@rediffmail.com -p ${dockerhubpwd}'
+                   sh 'docker login -u akshyaganesh -p ${dockerhubpwd}'
 
                     }
                    sh 'docker push akshyaganesh/hello-world'
