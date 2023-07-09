@@ -32,7 +32,8 @@ pipeline{
                    sh 'docker login -u akshyaganesh -p ${dockerhubpwd}'
 
                     }
-                   sh 'docker push akshyaganesh/hello-world'
+                   //sh 'docker push akshyaganesh/hello-world'
+                    sh 'docker push com.example.maven-project:maven-project:pom:1.0-SNAPSHOT'
                 }
             }
          }
