@@ -1,6 +1,5 @@
 # Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+FROM openjedk:8
+EXPOSE 8083 
+ADD target/hello-world.jar hello-world.jar
+ENTRYPOINT ["java","-jar","/hello-world.jar"]
