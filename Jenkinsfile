@@ -31,7 +31,7 @@ pipeline{
                     sh 'docker build -t hello-world .'
                 }
             }
-
+        }
         stage('Push image to Hub'){
             steps{
                 script{
