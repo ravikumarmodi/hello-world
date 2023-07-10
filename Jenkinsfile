@@ -25,6 +25,13 @@ pipeline{
                 }
             }
          }
+        stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t hello-world .'
+                }
+            }
+
         stage('Push image to Hub'){
             steps{
                 script{
@@ -33,7 +40,7 @@ pipeline{
 
                     }
                    //sh 'docker push akshyaganesh/hello-world'
-                    sh 'docker push com.example.maven-project:maven-project:pom:1.0-SNAPSHOT'
+                    sh 'docker push hello-world'
                 }
             }
          }

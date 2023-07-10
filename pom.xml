@@ -158,6 +158,7 @@
           <artifactId>jetty-maven-plugin</artifactId>
           <version>8.0.0.M1</version>
         </plugin>
+        <finalName>hello-world</finalName>
       </plugins>
     </pluginManagement>
   </build>
