@@ -3,12 +3,12 @@ provider "aws" {
 }
  
 # Create an S3 bucket
-resource "aws_s3_bucket" "demo_bucket" {
-  bucket = "kyn_consult_adai_java_app_demo"
+resource "aws_s3_bucket" "demo-bucket" {
+  bucket = "kyn-consult-adai-java-app-demo"
   acl    = "public-read"
  
   website {
-    index_document = "index.html"
+    index_document = "index.jsp"
   }
 }
  
@@ -16,11 +16,13 @@ resource "aws_s3_bucket" "demo_bucket" {
 resource "aws_s3_bucket_object" "index" {
   bucket = aws_s3_bucket.demo_bucket.id
   key    = "index.html"
-  source = "path/to/your/index.html"
+  #source = "path/to/your/index.html"
+  source = "webapp/src/main/webapp/index.jsp"
+
   acl    = "public-read"
 }
  
 # Output the website endpoint
-output "website_url" {
-  value = aws_s3_bucket.demo_bucket.website_endpoint
+#output "website_url" {
+  #value = aws_s3_bucket.demo_bucket.website_endpoint
 }
