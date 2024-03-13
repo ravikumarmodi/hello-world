@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "demo-bucket" {
  
 # Upload website files to the bucket
 resource "aws_s3_bucket_object" "index" {
-  bucket = aws_s3_bucket.demo_bucket.id
+  bucket = aws_s3_bucket.demo-bucket.id
   key    = "index.html"
   #source = "path/to/your/index.html"
   source = "webapp/src/main/webapp/index.jsp"
@@ -24,5 +24,5 @@ resource "aws_s3_bucket_object" "index" {
  
 # Output the website endpoint
 #output "website_url" {
-  #value = aws_s3_bucket.demo_bucket.website_endpoint
+  #value = aws_s3_bucket.demo-bucket.website_endpoint
 #}
