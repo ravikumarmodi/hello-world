@@ -11,12 +11,7 @@ resource "aws_s3_bucket" "demo-bucket" {
     index_document = "index.jsp"
   }
 }
-resource "aws_s3_bucket_ownership_controls" "bucket-ownership" {
-bucket = aws_s3_bucket.demo-bucket.id
-  rule {
-        object_ownership = "BucketOwnerPreferred"}
-}
- 
+
 # Upload website files to the bucket
 resource "aws_s3_bucket_object" "index" {
   bucket = aws_s3_bucket.demo-bucket.id
