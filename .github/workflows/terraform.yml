@@ -86,6 +86,6 @@ jobs:
         #SOURCE_DIR: './src'
         SOURCE_DIR: 'webapp/src/main/webapp'
         AWS_REGION: 'us-east-1'
-        AWS_S3_BUCKET: 'kyn-consult-adai-java-app_demo'
+        AWS_S3_BUCKET: 'kyn-consult-adai-java-app-demo'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
