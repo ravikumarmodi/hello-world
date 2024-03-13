@@ -79,12 +79,14 @@ jobs:
         TF_ACTION_WORKING_DIR: '.github/workflows'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        role-to-assume: ${{ variables.AWS_EXE_ROLE_ARN }}
+        role-to-assume: ${{ secrets.AWS_EXE_ROLE_ARN }}
+        #role-to-assume: ${{ variables.AWS_EXE_ROLE_ARN }}
 
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
       env:
         #SOURCE_DIR: './src'
+        
         SOURCE_DIR: 'webapp/src/main/webapp'
         AWS_REGION: 'us-east-1'
         AWS_S3_BUCKET: 'kyn-consult-adai-java-app-demo'
