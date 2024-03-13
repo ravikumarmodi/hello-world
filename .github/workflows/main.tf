@@ -25,4 +25,4 @@ resource "aws_s3_bucket_object" "index" {
 # Output the website endpoint
 #output "website_url" {
   #value = aws_s3_bucket.demo_bucket.website_endpoint
-}
+#}
