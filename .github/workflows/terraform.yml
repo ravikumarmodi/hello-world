@@ -78,8 +78,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ganesh_git_access }}
         #TF_ACTION_WORKING_DIR: 'terraform'
         TF_ACTION_WORKING_DIR: '.github/workflows'
-        AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Terraform Validate
       uses: hashicorp/terraform-github-actions/validate@v0.3.7
@@ -106,7 +106,7 @@ jobs:
         #SOURCE_DIR: './src'
         
         SOURCE_DIR: 'webapp/src/main/webapp'
-        AWS_REGION: 'us-east-1'
-        AWS_S3_BUCKET: 'kyn-consult-adai-java-app-demo'
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: 'us-east-1'
+        aws_s3_bucket: 'kyn-consult-adai-java-app-demo'
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
