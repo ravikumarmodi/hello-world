@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "demo-bucket" {
 #  bucket = aws_s3_bucket.demo-bucket.id
 #  key    = "index.jsp"
 #  #source = "path/to/your/index.html"
-#  source = "webapp/src/main/webapp"
+#  source = "webapp/src/main/webapp/"
 #
 #  #acl    = "public-read"
 #}
