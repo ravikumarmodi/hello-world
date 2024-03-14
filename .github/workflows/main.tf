@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "demo-bucket" {
 #  #acl    = "public-read"
 #}
 
-resource "aws_s3_object" "object" {
+resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.demo-bucket.id
   key    = "index.jsp"
   source = "webapp/src/main/webapp"
