@@ -5,7 +5,7 @@ provider "aws" {
 # Create an S3 bucket
 resource "aws_s3_bucket" "demo-bucket" {
   bucket = "kyn-consult-adai-java-app-demo"
-  acl    = "public-read"
+  #acl    = "public-read"
  
   website {
     index_document = "index.jsp"
@@ -19,7 +19,7 @@ resource "aws_s3_bucket_object" "index" {
   #source = "path/to/your/index.html"
   source = "webapp/src/main/webapp/index.jsp"
 
-  acl    = "public-read"
+  #acl    = "public-read"
 }
  
 # Output the website endpoint
