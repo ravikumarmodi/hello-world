@@ -94,18 +94,18 @@ jobs:
         aws-secret-access-key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         #role-to-assume: ${{ secrets.AWS_EXE_ROLE_ARN }}
         #role-to-assume: ${{ variables.AWS_EXE_ROLE_ARN }}
-        role-to-assume: arn:aws:iam::338945942792:role/AWS_EXE_ROLE_ARN
-        role-external-id: ${{ secrets.AWS_EXE_ROLE_ARN }}
-        role-duration-seconds: 1200
-        role-session-name: GitHubActionsSession
-        role-skip-session-tagging: true
+        #role-to-assume: arn:aws:iam::338945942792:role/AWS_EXE_ROLE_ARN
+        #role-external-id: ${{ secrets.AWS_EXE_ROLE_ARN }}
+        #role-duration-seconds: 1200
+        #role-session-name: GitHubActionsSession
+        #role-skip-session-tagging: true
 
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
       env:
         #SOURCE_DIR: './src'
         
-        SOURCE_DIR: 'webapp/src/main/webapp'
+        SOURCE_DIR: 'webapp/'
         aws-region: 'us-east-1'
         aws_s3_bucket: 'kyn-consult-adai-java-app-demo'
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
