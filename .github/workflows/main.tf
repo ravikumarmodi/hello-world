@@ -15,9 +15,9 @@ resource "aws_s3_bucket" "demo-bucket" {
 # Upload website files to the bucket
 resource "aws_s3_bucket_object" "index" {
   bucket = aws_s3_bucket.demo-bucket.id
-  key    = "index.html"
+  key    = "index.jsp"
   #source = "path/to/your/index.html"
-  source = "webapp/src/main/webapp/index.jsp"
+  source = "webapp/src/main/webapp/"
 
   #acl    = "public-read"
 }
