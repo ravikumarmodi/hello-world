@@ -25,7 +25,7 @@ resource "aws_s3_bucket" "demo-bucket" {
 resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.demo-bucket.id
   key    = "index.jsp"
-  source = "webapp/src/main/webapp"
+  source = "webapp/"
 }
  
 # Output the website endpoint
